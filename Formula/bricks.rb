@@ -9,7 +9,6 @@ class Bricks < Formula
   license "MIT"
 
   url_headers = [
-    "Accept: application/octet-stream",
     "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
   ]
 
