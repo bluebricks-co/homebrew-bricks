@@ -8,9 +8,10 @@ class Bricks < Formula
   homepage "https://bluebricks.co"
   version "1.1.8-test-ci-7"
   license "MIT"
+
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "2a6021e909c61024d4ea8d2d445c068f778d6f2c08c611d91b4e350759bea8a9"
+    url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "6680e78635fbe76c3b2a95e25db02b404b340c7837c37e9e5bfd32218c75403e"
 
     def install
       bin.install "bricks"
@@ -20,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "038134e1877b991a8732a31e46126f0cdac91db81a619185d407acf1e30c4e3a"
+        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "061f93e3763154ec7e0a8c609c2272a26b95f30051be67dd87cae6dc93973171"
 
         def install
           bin.install "bricks"
@@ -30,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "e1ba583b24d554e4c114a6caa142f87d992f0294db94e9f87f5d8fd0f95bc958"
+        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "4d2efc6c6cc2c57e7f08893ed8babdf59dce38452ce831fcf10eee5786bd0de6"
 
         def install
           bin.install "bricks"
