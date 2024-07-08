@@ -5,12 +5,12 @@
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "v1.1.8-test-ci-7"
+  version "1.1.8-test-ci-7"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_v1.1.8-test-ci-7_darwin_all.tar.gz"
-    sha256 "0fd6b3342e03c8fb272a5900d33057c53c00a8b7cdeb219ec9bf0b59a1a1da5e"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz"
+    sha256 "2a6021e909c61024d4ea8d2d445c068f778d6f2c08c611d91b4e350759bea8a9"
 
     def install
       bin.install "bricks"
@@ -20,8 +20,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_v1.1.8-test-ci-7_linux_amd64.tar.gz"
-        sha256 "4e2e2a14b9dcf5f0080dd6da19a7812b2c796e02b444996c58189837546446dc"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz"
+        sha256 "038134e1877b991a8732a31e46126f0cdac91db81a619185d407acf1e30c4e3a"
 
         def install
           bin.install "bricks"
@@ -30,8 +30,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_v1.1.8-test-ci-7_linux_arm64.tar.gz"
-        sha256 "ff67a8b2e8335e2194bf5d98646e91f713506cda02dc390628f35975a96a70af"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz"
+        sha256 "e1ba583b24d554e4c114a6caa142f87d992f0294db94e9f87f5d8fd0f95bc958"
 
         def install
           bin.install "bricks"
