@@ -8,8 +8,13 @@ class Bricks < Formula
   version "1.1.8-test-ci-7"
   license "MIT"
 
+  url_headers = [
+    "Accept: application/octet-stream",
+    "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+  ]
+
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", headers: url_headers
     sha256 "2a6021e909c61024d4ea8d2d445c068f778d6f2c08c611d91b4e350759bea8a9"
 
     def install
@@ -20,7 +25,7 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz", headers: url_headers
         sha256 "038134e1877b991a8732a31e46126f0cdac91db81a619185d407acf1e30c4e3a"
 
         def install
@@ -30,7 +35,7 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz", headers: url_headers
         sha256 "e1ba583b24d554e4c114a6caa142f87d992f0294db94e9f87f5d8fd0f95bc958"
 
         def install
