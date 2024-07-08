@@ -13,7 +13,7 @@ class Bricks < Formula
   ]
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", headers: url_headers
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
     sha256 "2a6021e909c61024d4ea8d2d445c068f778d6f2c08c611d91b4e350759bea8a9"
 
     def install
