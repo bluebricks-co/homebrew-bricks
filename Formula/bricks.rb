@@ -11,7 +11,7 @@ class Bricks < Formula
 
   on_macos do
     url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "a17ef259ac72367ea301a689a772dbdf7d98385b72eca9dc4ca77a00ebf7987f"
+    sha256 "da3c461f7dc52dd89d6d83ca1399a879b0a55fe0611d74e2e4783a2c8975cd16"
 
     def install
       bin.install "bricks"
@@ -22,7 +22,7 @@ class Bricks < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "c3ad92e6bcfb75a1c5092b95a59a10b92fd02823222a27835dc7f7903197cef7"
+        sha256 "83e62aacd4504c63ab928ba3e0324b1a7a92475b17603b59cce62d5a57b75bae"
 
         def install
           bin.install "bricks"
@@ -32,7 +32,7 @@ class Bricks < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "18c78f22b41fb69e1a9093365dc31b07f7b7b835d6f775fdc0bb1470d50452b8"
+        sha256 "e69acc534b762f3976a6a0b1afe91f0d5babd4d01228db5d0112e0a4cb3495a4"
 
         def install
           bin.install "bricks"
