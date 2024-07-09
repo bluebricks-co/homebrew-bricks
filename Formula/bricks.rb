@@ -6,17 +6,14 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.8-finish-ci"
+  version "v1.1.8-finish-ci"
   license "MIT"
 
-  livecheck do
-    url "https://github.mycompany.com/foo/bar/releases/latest"
-    regex(%r{href=.*?/releases/download/v?(\d+(?:\.\d+)+(?:-\S+)?)["']}i)
-  end
+  depends_on "git"
 
   on_macos do
-    url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "d2b66d3e64527bc49b71842555b7149fe5b410fd5e5ff8c9891190ceadf15453"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "0dd1e4ce91b6ae8027b82b99ddbd53268aca1f6292f15b7a3167bb4348cf95f2"
 
     def install
       bin.install "bricks"
@@ -26,8 +23,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "35c6f9330a5b78d6efdbd90fced0984e6df9d7c7ea6bbe86880589a5c26b4c16"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "90adf3301596c3a3eca1f4bee8312b5443f3f44ee402e241061f60ae771ff056"
 
         def install
           bin.install "bricks"
@@ -36,8 +33,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "4c384d665257dc914db6cf9f325ff6e481ab0f22f829f2ba696b8eb2edb08afa"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "f35f323817078170cdb99501520b2f7fe83cb3e6ee55a010414a16f10df8da77"
 
         def install
           bin.install "bricks"
@@ -46,9 +43,17 @@ class Bricks < Formula
     end
   end
 
+  def post_install
+    echo "Run 'bricks --help' to get started."
+  end
+
   def caveats
     <<~EOS
-      "Thank you for installing bricks! See more documentation at https://docs.bluebricks.co."
+      Thank you for installing bricks! 🧱 See more documentation at https://docs.bluebricks.co.
     EOS
+  end
+
+  test do
+    system "#{bin}/bricks --version"
   end
 end
