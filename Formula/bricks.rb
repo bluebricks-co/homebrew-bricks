@@ -6,14 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "v1.1.8-finish-ci"
+  version "1.1.8-finish-ci-v1"
   license "MIT"
 
-  depends_on "git"
-
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "0dd1e4ce91b6ae8027b82b99ddbd53268aca1f6292f15b7a3167bb4348cf95f2"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "a17ef259ac72367ea301a689a772dbdf7d98385b72eca9dc4ca77a00ebf7987f"
 
     def install
       bin.install "bricks"
@@ -23,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "90adf3301596c3a3eca1f4bee8312b5443f3f44ee402e241061f60ae771ff056"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "c3ad92e6bcfb75a1c5092b95a59a10b92fd02823222a27835dc7f7903197cef7"
 
         def install
           bin.install "bricks"
@@ -33,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci/bricks-cli_v1.1.8-finish-ci_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "f35f323817078170cdb99501520b2f7fe83cb3e6ee55a010414a16f10df8da77"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-finish-ci-v1/bricks-cli_1.1.8-finish-ci-v1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "18c78f22b41fb69e1a9093365dc31b07f7b7b835d6f775fdc0bb1470d50452b8"
 
         def install
           bin.install "bricks"
