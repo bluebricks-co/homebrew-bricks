@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.8-test-ci-7"
+  version "1.1.8-finish-ci"
   license "MIT"
 
   on_macos do
-    url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "6680e78635fbe76c3b2a95e25db02b404b340c7837c37e9e5bfd32218c75403e"
+    url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "d2b66d3e64527bc49b71842555b7149fe5b410fd5e5ff8c9891190ceadf15453"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "061f93e3763154ec7e0a8c609c2272a26b95f30051be67dd87cae6dc93973171"
+        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "35c6f9330a5b78d6efdbd90fced0984e6df9d7c7ea6bbe86880589a5c26b4c16"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-test-ci-7/bricks-cli_1.1.8-test-ci-7_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "4d2efc6c6cc2c57e7f08893ed8babdf59dce38452ce831fcf10eee5786bd0de6"
+        url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "4c384d665257dc914db6cf9f325ff6e481ab0f22f829f2ba696b8eb2edb08afa"
 
         def install
           bin.install "bricks"
