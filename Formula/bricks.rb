@@ -9,6 +9,11 @@ class Bricks < Formula
   version "1.1.8-finish-ci"
   license "MIT"
 
+  livecheck do
+    url "https://github.mycompany.com/foo/bar/releases/latest"
+    regex(%r{href=.*?/releases/download/v?(\d+(?:\.\d+)+(?:-\S+)?)["']}i)
+  end
+
   on_macos do
     url "https://github.mycompany.com/foo/bar/releases/download/v1.1.8-finish-ci/bricks-cli_1.1.8-finish-ci_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
     sha256 "d2b66d3e64527bc49b71842555b7149fe5b410fd5e5ff8c9891190ceadf15453"
