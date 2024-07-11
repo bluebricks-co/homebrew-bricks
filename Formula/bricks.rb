@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.9"
+  version "1.1.9-vars-config"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "f1907ccaa7bb52cbfb4fb6be7f9998e5a7b0b44ef596b44cf641aa9c9ec9d1cc"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "a787946e3dd71daa5c22b965ba429e353d11ba6f62b2780e1cdc889ddbbe6d60"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "8d478ae28e34766aa6f7fe35baeb865653f2f03fc0a8e782ebe8485b16b6f09a"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "bf620cac92bced785b6d6eca83f7f325b995a7dea63a7f66dae3bd0f6c262013"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "d10164eaa78c261238e223f8de2e69235ed3a029edb3b39e445d5cf421ac9db6"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "0895f99173673027483bb6efc8960f15d9a9e1bd1c23daa26d6e2365f7dd3388"
 
         def install
           bin.install "bricks"
