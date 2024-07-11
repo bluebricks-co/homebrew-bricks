@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.8-ci-final-4"
+  version "1.1.9"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-ci-final-4/bricks-cli_1.1.8-ci-final-4_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "e7cfb682263f49007a0d62c41dacb6414c5af5c4a13d42b69eb950dce18f82b4"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "368b722ef31b5577e94d528872001dbdc569111447f0dac3b0fdbe7371476b0b"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-ci-final-4/bricks-cli_1.1.8-ci-final-4_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "41582d68d7f269702322c7c8b03037522e707f943afa5df99ea67a3ecba6fdee"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "af46a65242f13dac60aaa178eb92e9f80409c2cd5183fc35c856edb2aacf7c6e"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.8-ci-final-4/bricks-cli_1.1.8-ci-final-4_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "36da0ce9fe27fdb3b627d26e93b6bf64aaa84e819ccdb871c7f3bd68070d7593"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9/bricks-cli_1.1.9_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "aadeac0f497fe4fc55fde2fa54474f121b72ecfa26d0ecd06dd3a25170ad5a4f"
 
         def install
           bin.install "bricks"
@@ -41,13 +41,10 @@ class Bricks < Formula
     end
   end
 
-  def post_install
-    system "echo", "Run 'bricks --help' to get started."
-  end
-
   def caveats
     <<~EOS
       Thank you for installing bricks! 🧱 See more documentation at https://docs.bluebricks.co.
+      Run 'bricks --help' to get started.
     EOS
   end
 
