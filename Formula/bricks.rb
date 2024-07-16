@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.9-vars-config"
+  version "1.1.10-docker-image"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "a787946e3dd71daa5c22b965ba429e353d11ba6f62b2780e1cdc889ddbbe6d60"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-docker-image/bricks_1.1.10-docker-image_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "8c533f3055455e05f0a5d17fea9c3ecdc9d072570ee63e5ce15580f65cb04fe8"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "bf620cac92bced785b6d6eca83f7f325b995a7dea63a7f66dae3bd0f6c262013"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-docker-image/bricks_1.1.10-docker-image_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "ff7e4dda789c53e70e240bd22617815c0546c878b17ea17d75874f8c787fb71a"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.9-vars-config/bricks-cli_1.1.9-vars-config_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "0895f99173673027483bb6efc8960f15d9a9e1bd1c23daa26d6e2365f7dd3388"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-docker-image/bricks_1.1.10-docker-image_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "099c202848381d13a5d71ec0090de6f6906f652beeadab1595dec9168d8873c0"
 
         def install
           bin.install "bricks"
