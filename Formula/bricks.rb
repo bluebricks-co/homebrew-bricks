@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.1.10"
+  version "1.1.10-prod"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10/bricks_1.1.10_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "97ae5d1d10ec20130ae46724f6dce8243d8d9c0380e7f51a801d3fb0fb2ad9da"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-prod/bricks_1.1.10-prod_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "523161824dfd4e279cd654c23f1254f1ae06f5e0554237282e76f25b284945d2"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10/bricks_1.1.10_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "2c999abde53c0f299b47b012b6251ca5538c82b09e9631cd7ddfbf811bb6e2b9"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-prod/bricks_1.1.10-prod_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "c072566a9ef9fcfb8e72dcc53e11ec8c8dfcf9ba04a16a8d00b18a0cfcd73f6f"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10/bricks_1.1.10_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "fbc3fc1bccc01fe88ef72f2cac8d027f677b4224667744c33fb55a2afef273d6"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.1.10-prod/bricks_1.1.10-prod_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "b3a115c8aa5eba0d514f4e41d8920708bda7cf2bb99d1430c1cf50410315c734"
 
         def install
           bin.install "bricks"
