@@ -6,12 +6,12 @@ require_relative "lib/custom_download_strategy"
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.0/bricks_1.2.0_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "f1380d677fe75b95d4445db76008422dd444fa55aea1635686b9ad696be841dc"
+    url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.1/bricks_1.2.1_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "f345a06467ba485f3cc7f6d9023a1655f587e37714bb58e52145c071a8a8f3c2"
 
     def install
       bin.install "bricks"
@@ -21,8 +21,8 @@ class Bricks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.0/bricks_1.2.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "baa205fa17c4003e26e0b844f44295ace6d80b7b515d4f2ddccc1755ab6307e5"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.1/bricks_1.2.1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "cc2487601e3bc42e339a2aaebef3732654167eea0c69afdfec8418ba09e7750f"
 
         def install
           bin.install "bricks"
@@ -31,8 +31,8 @@ class Bricks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.0/bricks_1.2.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "fe12a16f1d3864ddbe0f9b3be0013b0e0533c342059906fbc793db46955c25c4"
+        url "https://github.com/bluebricks-dev/bricks-cli/releases/download/v1.2.1/bricks_1.2.1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "2b8a7c3695bed13549dbce7691d365d53feeb43940a407c89f8de81df436707d"
 
         def install
           bin.install "bricks"
