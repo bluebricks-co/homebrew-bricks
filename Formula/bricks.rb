@@ -5,12 +5,12 @@
 class Bricks < Formula
   desc "Bricks CLI - Infrastructure Control Plane and Orchestration"
   homepage "https://bluebricks.co"
-  version "1.43.1"
+  version "1.44.0"
   license ":cannot_represent"
 
   on_macos do
-    url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.43.1/bricks_1.43.1_darwin_all.tar.gz"
-    sha256 "52b807706bbee89860ed9c6ee0302a9bbf7077c23734f9eaaa02ce8497910346"
+    url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.44.0/bricks_1.44.0_darwin_all.tar.gz"
+    sha256 "a32ff1d63eef782fa89f759a9f3ab41a8355f9c9dc7d18120c1eb81eec4c9fb2"
 
     def install
       bin.install "bricks"
@@ -18,24 +18,18 @@ class Bricks < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.43.1/bricks_1.43.1_linux_amd64.tar.gz"
-        sha256 "d8cdd051e6ffe329803a26ec888103ce1988bb5ade6f9991d9cdb6d37dc24380"
-
-        def install
-          bin.install "bricks"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.44.0/bricks_1.44.0_linux_amd64.tar.gz"
+      sha256 "fcf9d3f1c34220553aec90cabaa03097accf223c63e32c9ae735193b4d5d6e34"
+      def install
+        bin.install "bricks"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.43.1/bricks_1.43.1_linux_arm64.tar.gz"
-        sha256 "f55e04ce6cec3dd9abb624938a46ae90bed8f62533e08ba2e289bb1f451490d3"
-
-        def install
-          bin.install "bricks"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.44.0/bricks_1.44.0_linux_arm64.tar.gz"
+      sha256 "bcc6264137ffef02cb1aeb823b7bb8ffca72e6eae0b62e58e4a010714f9cdb6d"
+      def install
+        bin.install "bricks"
       end
     end
   end
