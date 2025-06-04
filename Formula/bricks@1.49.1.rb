@@ -10,7 +10,7 @@ class BricksAT1491 < Formula
 
   on_macos do
     url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.49.1/bricks_1.49.1_darwin_all.tar.gz"
-    sha256 "0d03d5a63a45be428a17e120454487bdcf39f459937fd7f263392bf26766f005"
+    sha256 "b6a87a9c053b9957ab3873bd9f6f9d952d539f0477f302ea9c6ede0917d85277"
 
     def install
       bin.install "bricks"
@@ -20,14 +20,14 @@ class BricksAT1491 < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.49.1/bricks_1.49.1_linux_amd64.tar.gz"
-      sha256 "f9668e90eb243f9ca1d1231932591575d4225f11470f88758561eedc98464dea"
+      sha256 "d87a5f56dbf8d062a59aece2f5ba9dcc760c6dc75957cd4a17dd43621c66645b"
       def install
         bin.install "bricks"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://brickscli.s3.eu-west-1.amazonaws.com/releases/1.49.1/bricks_1.49.1_linux_arm64.tar.gz"
-      sha256 "7fa0ec60e0743bcbfdd0f30116763777b843f60c680ec2c8c39c50ef8f9923b3"
+      sha256 "0bfaff35e67e400d3c7ae5a8e70990d459b4eb9f5b77ec6f3d2f5574ba2929c3"
       def install
         bin.install "bricks"
       end
